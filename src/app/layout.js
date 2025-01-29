@@ -11,7 +11,19 @@ export default function RootLayout({ children }) {
       <head>
         <GoogleTagManager gtmId="GTM-MVC4G9ZN" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MVC4G9ZN"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+      </body>
     </html>
   );
 }
